@@ -1,11 +1,38 @@
 body {
   font-family: 'Nunito', Arial, sans-serif;
   font-size: 12px;
-}
-
-h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
+
+
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0;
+}
+
+.flex {
+  display:flex
+}
+.header{
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 15px;
+  padding-left: 15px;
+  justify-content: space-between
+  
+}
+img{
+  width: 50px;
+}
+nav a{
+text-decoration: none;
+color: black;
+font-weight: bold;
+font-size: 8px;
+padding-right: 5px;
+text-shadow: rgb(73, 73, 73) 1px 1px 1px;
+}
+
 
 /*
 banner image
@@ -29,12 +56,128 @@ For banner over lay add this class to your div
   position: relative;
 }
 
-.banner__container:before {
+/**.banner__container:before{
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
   background-color: rgba(0,0,0,0.4);
-  content: "";
+  content: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/melbourne.jpg");
+} */
+
+
+.banner__container{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/melbourne.jpg");
+  background-size: cover;
+  height: 400px;
+  padding:50px;
+}
+
+.banner__container .flex{
+  flex-direction: column;
+  align-items: center;
+  
+}
+.banner__container div{
+  padding-top: 125px;
+}
+h1{
+  font-size: 40px;
+  color: white;
+}
+.flex h4{
+  width: 300px;
+  text-align: center;
+  color: white;
+}
+button{
+  color: white;
+  font-family: 'Nunito', Arial, sans-serif;
+  background-color: rgb(221, 80, 80);
+  border: none;
+  border-radius: 3px;
+  margin-top: 5px;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.toggle{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgb(221, 221, 221);
+}
+
+.toggle :first-child{
+  justify-content: space-between;
+  padding-right: 30px;
+}
+
+.box{
+  background-color: white;
+  align-items: center;
+  
+}
+
+.toggle h4{
+  color: black;
+  text-align:left;
+  padding: 5px;
+}
+
+.toggle h6{
+  color: black;
+  text-align:left;
+}
+.featured{
+  flex-direction: column;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 15px;
+  text-shadow: grey  1px 1px 1px;
+}
+.featured h3{
+  font-size: 20px;
+}
+
+
+.table{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/fitzroy.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  color: white;
+}
+.beach{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/st-kilda.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  color: white
+}
+.business{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/central-business-district.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  color: white
+}
+.footer{
+  justify-content: space-around;
+  padding-bottom: 30px;
+}
+.bottom button{
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom:25px;
 }
